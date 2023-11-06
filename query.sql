@@ -7,5 +7,5 @@ select ethnicity, count(student_id) from student group by ethnicity
 
 --3. Вивести id студентів-чоловіків, та їх бали за тест з математики
 select student_id, score from results
-where test_id = '1' and student_id in(select student_id from student where gender='male')
+where test_id = 1 and student_id in(select student_id from student where gender='male')
 
