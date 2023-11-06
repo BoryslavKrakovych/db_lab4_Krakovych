@@ -18,7 +18,7 @@ select ethnicity, count(student_id) from student group by ethnicity
 
 query_3 = '''
 select student_id, score from results
-where test_id = '1' and student_id in(select student_id from student where gender='male')
+where test_id = 1 and student_id in(select student_id from student where gender='male')
 '''
 
 conn = psycopg2.connect(user=username, password=password, dbname=database, host=host, port=port)
